@@ -58,7 +58,7 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
 
         mRotateView = header.findViewById(R.id.ptr_classic_header_rotate_view);
 
-        mTitleTextView = (TextView) header.findViewById(R.id.ptr_classic_header_rotate_view_header_title);
+        //mTitleTextView = (TextView) header.findViewById(R.id.ptr_classic_header_rotate_view_header_title);
         mLastUpdateTextView = (TextView) header.findViewById(R.id.ptr_classic_header_rotate_view_header_last_update);
         mProgressBar = header.findViewById(R.id.ptr_classic_header_rotate_view_progressbar);
 
@@ -141,11 +141,11 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
         mProgressBar.setVisibility(INVISIBLE);
 
         mRotateView.setVisibility(VISIBLE);
-        mTitleTextView.setVisibility(VISIBLE);
+        //mTitleTextView.setVisibility(VISIBLE);
         if (frame.isPullToRefresh()) {
-            mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down_to_refresh));
+           // mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down_to_refresh));
         } else {
-            mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down));
+          //  mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down));
         }
     }
 
@@ -154,8 +154,8 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
         mShouldShowLastUpdate = false;
         hideRotateView();
         mProgressBar.setVisibility(VISIBLE);
-        mTitleTextView.setVisibility(VISIBLE);
-        mTitleTextView.setText(R.string.cube_ptr_refreshing);
+     //   mTitleTextView.setVisibility(VISIBLE);
+     //   mTitleTextView.setText(R.string.cube_ptr_refreshing);
 
         tryUpdateLastUpdateTime();
         mLastUpdateTimeUpdater.stop();
@@ -167,8 +167,8 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
         hideRotateView();
         mProgressBar.setVisibility(INVISIBLE);
 
-        mTitleTextView.setVisibility(VISIBLE);
-        mTitleTextView.setText(getResources().getString(R.string.cube_ptr_refresh_complete));
+     //   mTitleTextView.setVisibility(VISIBLE);
+        mLastUpdateTextView.setText(getResources().getString(R.string.cube_ptr_refresh_complete));
 
         // update last update time
         SharedPreferences sharedPreferences = getContext().getSharedPreferences(KEY_SharedPreferences, 0);
@@ -179,17 +179,19 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
     }
 
     private void tryUpdateLastUpdateTime() {
+        /**
         if (TextUtils.isEmpty(mLastUpdateTimeKey) || !mShouldShowLastUpdate) {
-            mLastUpdateTextView.setVisibility(GONE);
+          //  mLastUpdateTextView.setVisibility(GONE);
         } else {
             String time = getLastUpdateTime();
             if (TextUtils.isEmpty(time)) {
-                mLastUpdateTextView.setVisibility(GONE);
+             //   mLastUpdateTextView.setVisibility(GONE);
             } else {
                 mLastUpdateTextView.setVisibility(VISIBLE);
                 mLastUpdateTextView.setText(time);
             }
-        }
+        }**/
+        mLastUpdateTextView.setText("Pull Down to Refresh");
     }
 
     private String getLastUpdateTime() {
@@ -259,17 +261,17 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
 
     private void crossRotateLineFromTopUnderTouch(PtrFrameLayout frame) {
         if (!frame.isPullToRefresh()) {
-            mTitleTextView.setVisibility(VISIBLE);
-            mTitleTextView.setText(R.string.cube_ptr_release_to_refresh);
+         //   mTitleTextView.setVisibility(VISIBLE);
+            mLastUpdateTextView.setText(R.string.cube_ptr_release_to_refresh);
         }
     }
 
     private void crossRotateLineFromBottomUnderTouch(PtrFrameLayout frame) {
-        mTitleTextView.setVisibility(VISIBLE);
+      //  mTitleTextView.setVisibility(VISIBLE);
         if (frame.isPullToRefresh()) {
-            mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down_to_refresh));
+            mLastUpdateTextView.setText(getResources().getString(R.string.cube_ptr_pull_down_to_refresh));
         } else {
-            mTitleTextView.setText(getResources().getString(R.string.cube_ptr_pull_down));
+            mLastUpdateTextView.setText(getResources().getString(R.string.cube_ptr_pull_down));
         }
     }
 
