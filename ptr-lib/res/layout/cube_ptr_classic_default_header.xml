@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:paddingBottom="15dp">
 
-
         <LinearLayout
             android:orientation="vertical"
             android:id="@+id/store_house_ptr_content"
