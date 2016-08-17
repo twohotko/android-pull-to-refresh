@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ptr_classic_header_rotate_view_header_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/store_house_ptr_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal">
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="20dip"
+                android:background="#d4d4d4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1&#8211;3 Days Flash Shipping"
+                android:id="@+id/homeFragment_SwipeToRefresh_Text1"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="#c959eb"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="-5dp"
+                android:textSize="10dp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="20dip"
+                android:background="#d4d4d4"
+                android:layout_marginTop="-5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100% Authentic"
+                android:id="@+id/homeFragment_SwipeToRefresh_Text2"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="#c959eb"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="-5dp"
+                android:textSize="10dp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="15dip"
+                android:background="#d4d4d4"
+                android:layout_marginTop="-5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeFragment_SwipeToRefresh_Text3"
+                android:text="&#x2193;"
+                android:layout_marginTop="-20dp"
+                android:textColor="#d4d4d4"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:layout_marginTop="-5dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_toLeftOf="@+id/store_house_ptr_content"
+            android:layout_marginTop="-10dp"
+            android:layout_alignBottom="@+id/store_house_ptr_content">
+
+            <ImageView
+                android:id="@+id/ptr_classic_header_rotate_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ptr_rotate_arrow" />
+
+            <ProgressBar
+                android:id="@+id/ptr_classic_header_rotate_view_progressbar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>
