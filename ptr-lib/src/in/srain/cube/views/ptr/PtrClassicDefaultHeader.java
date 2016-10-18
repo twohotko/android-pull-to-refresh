@@ -191,7 +191,7 @@ public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler
                 mLastUpdateTextView.setText(time);
             }
         }**/
-        mLastUpdateTextView.setText("Pull Down to Refresh");
+        mLastUpdateTextView.setText(getResources().getString(R.string.cube_ptr_release_to_refresh));
     }
 
     private String getLastUpdateTime() {

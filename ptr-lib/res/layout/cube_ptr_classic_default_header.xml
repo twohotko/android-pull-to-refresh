@@ -20,60 +20,61 @@
 
             <View
                 android:layout_width="1dip"
-                android:layout_height="20dip"
-                android:background="#d4d4d4" />
+                android:layout_height="10dip"
+                android:background="#FF0068" />
 
             <TextView
+                android:minWidth="160dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 1&#8211;3 Days Flash Shipping"
+                android:gravity="center"
+                android:text="@string/cube_ptr_text1"
                 android:id="@+id/homeFragment_SwipeToRefresh_Text1"
-                android:background="@android:drawable/editbox_background"
-                android:textColor="#c959eb"
+                android:background="@drawable/frame_hermo"
+                android:textColor="#FF0068"
                 android:padding="10dp"
                 android:textStyle="bold"
-                android:layout_marginTop="-5dp"
-                android:textSize="10dp" />
+                android:textSize="@dimen/textSize" />
 
             <View
                 android:layout_width="1dip"
-                android:layout_height="20dip"
-                android:background="#d4d4d4"
-                android:layout_marginTop="-5dp" />
+                android:layout_height="10dip"
+                android:background="#FF0068" />
 
             <TextView
+                android:minWidth="110dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100% Authentic"
+                android:gravity="center"
+                android:text="@string/cube_ptr_text2"
                 android:id="@+id/homeFragment_SwipeToRefresh_Text2"
-                android:background="@android:drawable/editbox_background"
-                android:textColor="#c959eb"
+                android:background="@drawable/frame_hermo"
+                android:textColor="#FF0068"
                 android:padding="10dp"
                 android:textStyle="bold"
-                android:layout_marginTop="-5dp"
-                android:textSize="10dp" />
+                android:textSize="@dimen/textSize"/>
 
             <View
                 android:layout_width="1dip"
-                android:layout_height="15dip"
-                android:background="#d4d4d4"
-                android:layout_marginTop="-5dp" />
+                android:layout_height="10dip"
+                android:background="#FF0068" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/homeFragment_SwipeToRefresh_Text3"
                 android:text="&#x2193;"
-                android:layout_marginTop="-20dp"
-                android:textColor="#d4d4d4"
-                android:textSize="30sp" />
+                android:textColor="#FF0068"
+                android:textSize="@dimen/arrowSize"
+                android:layout_marginTop="-15dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FF0068"
                 android:textStyle="bold"
+                android:textSize="@dimen/textSize"
                 android:layout_marginTop="-5dp" />
 
         </LinearLayout>
@@ -99,7 +100,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
+
         </FrameLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
