@@ -67,7 +67,6 @@
                 android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
                 android:textColor="#FF0068"
                 android:textStyle="bold"
-                android:text="PULL TO"
                 android:textSize="@dimen/textSize"
                 android:layout_marginTop="5dp" />
 
