@@ -59,14 +59,7 @@
                 android:layout_height="10dip"
                 android:background="#FF0068" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/homeFragment_SwipeToRefresh_Text3"
-                android:text="&#x2193;"
-                android:textColor="#FF0068"
-                android:textSize="@dimen/arrowSize"
-                android:layout_marginTop="-15dp"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -74,8 +67,9 @@
                 android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
                 android:textColor="#FF0068"
                 android:textStyle="bold"
+                android:text="PULL TO"
                 android:textSize="@dimen/textSize"
-                android:layout_marginTop="-5dp" />
+                android:layout_marginTop="5dp" />
 
         </LinearLayout>
 
